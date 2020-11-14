@@ -50,11 +50,19 @@ const Navbar = () => {
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
-            <Dropdown.Item href="#action/3.1">About me</Dropdown.Item>
-            <Dropdown.Item href="#action/3.2">Experience</Dropdown.Item>
-            <Dropdown.Item href="#action/3.2">Projects</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/about">
+              About me
+            </Dropdown.Item>
+            <Dropdown.Item as={Link} to="/experience">
+              Experience
+            </Dropdown.Item>
+            <Dropdown.Item as={Link} to="/">
+              Projects
+            </Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item href="#action/3.4">Contact me 🤙</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/contact">
+              Contact me 🤙
+            </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </Container>
