@@ -33,7 +33,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Montserrat\:200,400,700`, `Roboto\:300,400`, `Merriweather`],
+        fonts: [
+          `Montserrat\:200,400,700`,
+          `Roboto\:300,400`,
+          `Merriweather`,
+          `Roboto Mono`,
+        ],
         display: "swap",
       },
     },
@@ -56,7 +61,10 @@ module.exports = {
           {
             resolve: `gatsby-remark-images-contentful`,
             options: {
-              maxWidth: 590,
+              maxWidth: 800,
+              linkImagesToOriginal: false,
+              showCaptions: true,
+              wrapperStyle: "border-radius:5px; overflow:hidden",
             },
           },
         ],

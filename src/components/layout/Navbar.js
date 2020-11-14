@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
-import { Navbar as BNavbar, Nav, NavDropdown, Container } from "react-bootstrap"
+import {
+  Navbar as BNavbar,
+  Nav,
+  NavDropdown,
+  Dropdown,
+  Container,
+} from "react-bootstrap"
 
 const Navbar = () => {
   useEffect(() => {
@@ -22,33 +28,35 @@ const Navbar = () => {
       <Container className="position-relative">
         <BNavbar.Brand
           as={Link}
-          to="/index"
+          to="/"
           className="font-weight-bold montserrat mx-auto"
           style={{ letterSpacing: "2px" }}
         >
           COZMIC CREATIVES
         </BNavbar.Brand>
 
-        <Nav className="position-absolute" style={{ right: 0 }}>
-          <NavDropdown
-            title="Menu"
-            id="collasible-nav-dropdown"
-            className="montserrat"
-            alignRight
+        <Dropdown alignRight className="position-absolute" style={{ right: 0 }}>
+          <Dropdown.Toggle
+            variant="light"
+            size="sm"
+            className="montserrat d-flex"
           >
-            <NavDropdown.Item href="#action/3.1">
-              What's this about?
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Professional experience
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Projects</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
-              Contact me 🤙
-            </NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
+            <span className="d-none d-md-block">MENU</span>
+            <div className="hamburger">
+              <div className="top-bar"></div>
+              <div className="middle-bar"></div>
+              <div className="bottom-bar"></div>
+            </div>
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            <Dropdown.Item href="#action/3.1">About me</Dropdown.Item>
+            <Dropdown.Item href="#action/3.2">Experience</Dropdown.Item>
+            <Dropdown.Item href="#action/3.2">Projects</Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Item href="#action/3.4">Contact me 🤙</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </Container>
     </BNavbar>
   )
