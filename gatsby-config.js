@@ -13,7 +13,7 @@ module.exports = {
       twitter: `matthewbracke`,
     },
     description: `Welcome to Cozmic Creatives`,
-    siteUrl: `https://cozmiccreatives.com`,
+    siteUrl: `https://www.cozmic-creatives.com`,
   },
   plugins: [
     {
@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ["G-2LT2XE2JW5"],
+        trackingIds: ["G-9DJT5QK59S"],
         gtagConfig: {
           anonymize_ip: true,
           cookie_expires: 0,
