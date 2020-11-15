@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
-import {
-  Navbar as BNavbar,
-  Nav,
-  NavDropdown,
-  Dropdown,
-  Container,
-} from "react-bootstrap"
+import { Navbar as BNavbar, Dropdown, Container } from "react-bootstrap"
 
 const Navbar = () => {
   useEffect(() => {

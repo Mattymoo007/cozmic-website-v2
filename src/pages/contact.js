@@ -1,11 +1,14 @@
 import React from "react"
-import { Card, CardColumns, Container, Badge, Row, Col } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import Layout from "../layouts/Layout"
 import Text from "src/utils/Text"
+import SEO from "src/components/SEO"
 
 const contact = () => {
   return (
     <Layout>
+      <SEO title="Contact" />
+
       <Container>
         <Row>
           <Col

@@ -1,11 +1,13 @@
 import React from "react"
-import { Card, CardColumns, Container, Badge, Row, Col } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import Layout from "../layouts/Layout"
 import Text from "src/utils/Text"
+import SEO from "src/components/SEO"
 
 const about = () => {
   return (
     <Layout>
+      <SEO title="About" />
       <Container>
         <Row className="py-4 py-md-6">
           <Col md={8} className="mx-auto">

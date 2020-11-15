@@ -4,7 +4,8 @@ import FilterBar from "components/FilterBar"
 import Layout from "../layouts/Layout"
 import Image from "gatsby-image"
 import htmlExists from "src/utils/htmlExists"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import SEO from "src/components/SEO"
 
 const Index = ({
   data: {
@@ -25,6 +26,7 @@ const Index = ({
 
   return (
     <Layout>
+      <SEO title="Projects" />
       <Container>
         <FilterBar filterProjects={filterProjects} className="mb-4" />
 
