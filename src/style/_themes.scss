@@ -1,0 +1,17 @@
+// Light mode
+:root {
+  --color-background: #f5f6f7;
+  --color-text: #222;
+  --color-primary: #164bc5;
+  --color-card: white;
+  --color-logo: black;
+}
+
+// Dark Mode
+:root.dark {
+  --color-background: rgb(33, 33, 33);
+  --color-text: rgb(224, 224, 224);
+  --color-primary: #0f9640;
+  --color-card: #303030;
+  --color-logo: white;
+}

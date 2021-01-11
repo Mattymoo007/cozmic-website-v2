@@ -17,12 +17,12 @@ p {
 }
 
 .hamburger {
-  margin: 2px 0 0 8px;
+  // margin: 2px 0 0 8px;
 
   div {
     width: 14px;
     height: 1px;
-    background-color: black;
+    background-color: var(--color-text);
     margin-top: 3px;
     border-radius: 1px;
     transition: transform 0.2s;

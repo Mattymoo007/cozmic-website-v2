@@ -1,9 +1,12 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
 import { Col, Container, Row, Nav } from "react-bootstrap"
 import { FaHome, FaTwitter } from "react-icons/fa"
+import { ThemeContext } from "src/layouts/Layout"
 
 const Footer = () => {
+  const { isDark } = useContext(ThemeContext)
+
   return (
     <footer>
       <Container>
@@ -15,7 +18,7 @@ const Footer = () => {
                   as={Link}
                   to="/"
                   eventKey="link-0"
-                  className="text-dark"
+                  className={isDark ? "text-light" : "text-dark"}
                 >
                   <FaHome />
                 </Nav.Link>
@@ -25,7 +28,7 @@ const Footer = () => {
                   eventKey="link-1"
                   href="https://twitter.com/CozmicMatt"
                   target="_newTab"
-                  className="text-dark"
+                  className={isDark ? "text-light" : "text-dark"}
                 >
                   <FaTwitter />
                 </Nav.Link>

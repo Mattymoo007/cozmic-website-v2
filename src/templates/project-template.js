@@ -2,6 +2,7 @@ import React from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import Layout from "src/layouts/Layout"
 import htmlExists from "src/utils/htmlExists"
+import { graphql } from "gatsby"
 
 const project = ({
   data: {
