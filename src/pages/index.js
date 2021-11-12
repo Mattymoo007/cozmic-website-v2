@@ -15,7 +15,7 @@ import SEO from "src/components/SEO"
 
 const Index = ({
   data: {
-    allContentfulProject: { projects },
+    contentfulArray: { items: projects },
   },
 }) => {
   const [filteredProjects, setFilteredProjects] = useState([...projects])
@@ -45,7 +45,7 @@ const Index = ({
         {({ isDark }) => (
           <Container>
             <Row className="justify-content-center mono ">
-              {options.map((option, index) => (
+              {options.map(option => (
                 <Button
                   variant={isDark ? "dark" : "light"}
                   className="mx-2 mb-4"
@@ -103,22 +103,22 @@ const Index = ({
 
 export const query = graphql`
   {
-    allContentfulProject {
-      projects: nodes {
-        slug
-        tags
+    contentfulArray(contentful_id: { eq: "1449rrFKe0Ev87UCAjAziH" }) {
+      items {
         thumbnail {
           fluid {
             ...GatsbyContentfulFluid
           }
         }
+        slug
+        tags
+        contentful_id
         title
         introduction {
           childMarkdownRemark {
             html
           }
         }
-        contentful_id
       }
     }
   }

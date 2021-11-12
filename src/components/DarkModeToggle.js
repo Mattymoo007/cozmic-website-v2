@@ -11,7 +11,7 @@ const DarkModeToggle = () => {
         aria-label="dark-mode"
         onChange={() => toggleTheme()}
         value="dark"
-        checked={isDark}
+        checked={!!isDark}
       />
     </span>
   )
